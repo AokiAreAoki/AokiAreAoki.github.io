@@ -1,0 +1,20 @@
+[
+	{
+		"id": "news",
+		"title": "News",
+		"order": 1,
+		"path": "News"
+	},
+	{
+		"id": "another-news",
+		"title": "Another News",
+		"order": 2,
+		"path": "AnotherNews"
+	},
+	{
+		"id": "memes",
+		"title": "Memes",
+		"order": 0,
+		"path": "Memes"
+	}
+]
