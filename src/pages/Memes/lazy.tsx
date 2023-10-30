@@ -1,9 +1,8 @@
 import { Suspense, lazy } from "react";
 import { MemesType } from ".";
 import Loading from "../../components/Loading";
-import fakeLoad from "../../utils/fakeLoad";
 
-const Memes = lazy(() => fakeLoad(import(".")));
+const Memes = lazy(() => import("."));
 
 const LazyMemes: MemesType = (props) => (
 	<Suspense fallback={<Loading />}>

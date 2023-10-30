@@ -9,8 +9,6 @@ import ErrorMessage from "./components/ErrorMessage";
 // import LazyNews from "./pages/News";
 // import LazyAnotherNews from "./pages/AnotherNews";
 // import LazyMemes from "./pages/Memes";
-import Footer from "./components/Footer";
-import fakeLoad from "./utils/fakeLoad";
 
 const Root = styled(Flex)`
 	width: 100vw;
@@ -43,7 +41,7 @@ function App() {
 						<Route path="/memes" element={<LazyMemes />} /> */}
 
 						{tabs.map((tab) => {
-							const Page = lazy(() => fakeLoad(import(`./pages/${tab.path}/index.tsx`)));
+							const Page = lazy(() => import(`./pages/${tab.path}/index.tsx`));
 
 							return (
 								<Route
@@ -72,7 +70,7 @@ function App() {
 					{content}
 				</Flex>
 
-				<Footer>* Loading time is artificially extended for demonstration purposes</Footer>
+				{/* <Footer>* Loading time is artificially extended for demonstration purposes</Footer> */}
 			</Flex>
 		</Root>
 	);

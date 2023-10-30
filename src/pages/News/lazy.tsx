@@ -1,9 +1,8 @@
 import { Suspense, lazy } from "react";
 import { NewsType } from ".";
 import Loading from "../../components/Loading";
-import fakeLoad from "../../utils/fakeLoad";
 
-const News = lazy(() => fakeLoad(import(".")));
+const News = lazy(() => import("."));
 
 const LazyNews: NewsType = (props) => (
 	<Suspense fallback={<Loading />}>

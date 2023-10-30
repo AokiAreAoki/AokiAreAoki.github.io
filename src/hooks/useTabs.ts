@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react";
 import Joi from "joi";
-import fakeLoad from "../utils/fakeLoad";
 
 const URL = `/tabs.json`;
 
@@ -27,7 +26,7 @@ export default function useTabs() {
 	useEffect(() => {
 		const controller = new AbortController();
 
-		fakeLoad(fetch(URL, { signal: controller.signal }))
+		fetch(URL, { signal: controller.signal })
 			.then((response) => response.json() as Promise<Tab[]>)
 			.then((json) => {
 				const result = schema.validate(json);
