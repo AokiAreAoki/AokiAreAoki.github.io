@@ -2,7 +2,7 @@
   "name": "backendless-test-assignment-vite",
   "private": true,
   "version": "0.0.0",
-  "homepage": "https://aokiareaoki.github.io/test-assignment/",
+  "homepage": "https://aoki-hub.hopto.org/",
   "type": "module",
   "scripts": {
     "dev": "vite",

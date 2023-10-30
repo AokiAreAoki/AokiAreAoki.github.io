@@ -32,14 +32,12 @@ function App() {
 
 			if (!firstTab) return <ErrorMessage title="Error!" content="No tabs" />;
 
-			console.log({ tabs });
-
 			return (
 				<>
 					<TabSelector tabs={tabs} />
 
 					<Routes>
-						<Route path="/" element={<Navigate to={`/${firstTab.id}`} />} />
+						<Route path="*" element={<Navigate to={`/${firstTab.id}`} />} />
 						{/* <Route path="/news" element={<LazyNews />} />
 						<Route path="/another-news" element={<LazyAnotherNews />} />
 						<Route path="/memes" element={<LazyMemes />} /> */}
